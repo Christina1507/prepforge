@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepForge - Placement & Career-Readiness Platform</title>
+    <meta name="description" content="All-in-one placement preparation workspace for engineering students: DSA, Core CS, Aptitude, SQL, Habits, Roadmaps, Company Packs, and AI Study Coach." />
+    <meta property="og:title" content="PrepForge - Placement & Career-Readiness Platform" />
+    <meta property="og:description" content="All-in-one placement preparation workspace for engineering students: DSA, Core CS, Aptitude, SQL, Habits, Roadmaps, Company Packs, and AI Study Coach." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('prefforge-theme') || localStorage.getItem('prepforge-theme') || 'system';
+          var isDark = saved === 'dark' || (saved === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var root = document.documentElement;
+          if (isDark) {
+            root.classList.remove('light');
+            root.classList.add('dark');
+          } else {
+            root.classList.remove('dark');
+            root.classList.add('light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

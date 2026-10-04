@@ -1,0 +1,6 @@
+{
+  "name": "PrepForge - Placement & Career-Readiness Platform",
+  "description": "All-in-one placement preparation workspace for engineering students: DSA, Core CS, Aptitude, SQL, Habits, Roadmaps, Company Packs, and AI Study Coach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

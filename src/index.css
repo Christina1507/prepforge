@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-accent: var(--accent);
+}
+
+:root, html.light, .light {
+  --background: #F7F5F0;
+  --foreground: #1F2933;
+  --card: #FFFFFF;
+  --card-foreground: #1F2933;
+  --primary: #6F8F7A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EEEAE3;
+  --muted: #E8E5DE;
+  --muted-foreground: #6B7280;
+  --border: #DDD8CF;
+  --input: #FFFFFF;
+  --accent: #E6DED2;
+  color-scheme: light;
+}
+
+html.dark, .dark {
+  --background: #0B1020;
+  --foreground: #F5F7FA;
+  --card: #111827;
+  --card-foreground: #F5F7FA;
+  --primary: #8FB5A0;
+  --primary-foreground: #0B1020;
+  --secondary: #1A2233;
+  --muted: #202A3A;
+  --muted-foreground: #9CA3AF;
+  --border: #2A3447;
+  --input: #111827;
+  --accent: #29243A;
+  color-scheme: dark;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+    min-height: 100vh;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom sleek scrollbar adapted to theme variables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  opacity: 0.3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+  opacity: 0.6;
+}
+
+/* Semantic utility classes */
+.theme-card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-color: var(--border);
+}
+.theme-input {
+  background-color: var(--input);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+.theme-border {
+  border-color: var(--border);
+}
+
